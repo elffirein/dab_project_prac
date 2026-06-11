@@ -1,0 +1,23 @@
+resources:
+  pipelines:
+    citibike_pipeline:
+      name: citibike_etl_pipeline
+      configuration:
+        catalog: "${var.catalog}"
+      libraries:
+        - glob:
+            include: /Workspace/Users/kaustuv.chatterjee_gmail.com#ext#@kaustuvchatterjeegmail.onmicrosoft.com/.bundle/dab_project_prac/dev/files/citibike_etl/dlt/01_bronze/01_bronze_citibike
+        - glob:
+            include: /Workspace/Users/kaustuv.chatterjee_gmail.com#ext#@kaustuvchatterjeegmail.onmicrosoft.com/.bundle/dab_project_prac/dev/files/citibike_etl/dlt/02_silver/02_silver_citibike
+        - glob:
+            include: /Workspace/Users/kaustuv.chatterjee_gmail.com#ext#@kaustuvchatterjeegmail.onmicrosoft.com/.bundle/dab_project_prac/dev/files/citibike_etl/dlt/03_gold/03_gold_citibike_daily_ride_summary
+        - glob:
+            include: /Workspace/Users/kaustuv.chatterjee_gmail.com#ext#@kaustuvchatterjeegmail.onmicrosoft.com/.bundle/dab_project_prac/dev/files/citibike_etl/dlt/03_gold/03_gold_citibike_daily_station_performance
+      schema: default
+      continuous: false
+      development: false
+      photon: true
+      channel: CURRENT
+      catalog: "${var.catalog}"
+      serverless: "${var.dev_flag}"
+      root_path: /Workspace/Shared/dlt/New Pipeline 2026-06-11 06:40
