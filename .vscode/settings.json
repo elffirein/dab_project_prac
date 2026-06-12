@@ -37,4 +37,5 @@
         "editor.formatOnSave": true,
     },
     "snyk.advanced.autoSelectOrganization": true,
+    "snyk.advanced.organization": "45128639-64e7-4994-992c-d016dad68ad9",
 }

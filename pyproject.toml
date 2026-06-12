@@ -1,6 +1,7 @@
 [project]
 name = "dab_project_prac"
 version = "0.0.1"
+dynamic = ["description", "entry-points"]
 authors = [{ name = "kaustuv.chatterjee_gmail.com#ext#@kaustuvchatterjeegmail.onmicrosoft.com" }]
 requires-python = ">=3.10,<3.13"
 dependencies = [
