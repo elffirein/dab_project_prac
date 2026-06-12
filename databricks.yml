@@ -48,8 +48,10 @@ targets:
       # We explicitly deploy to /Workspace/Users/kaustuv.chatterjee_gmail.com#ext#@kaustuvchatterjeegmail.onmicrosoft.com to make sure we only have a single copy.
       root_path: /Workspace/Shared/.bundle/${bundle.name}/${bundle.target}
     permissions:
-      - user_name: kaustuv.chatterjee_gmail.com#ext#@kaustuvchatterjeegmail.onmicrosoft.com
+      - service_principal_name: 3fac10c0-d6b8-4365-a126-c1ab72306a53
         level: CAN_MANAGE
+    run_as:
+      service_principal_name: 3fac10c0-d6b8-4365-a126-c1ab72306a53
   prod:
     mode: production
     variables:
@@ -61,5 +63,7 @@ targets:
       # We explicitly deploy to /Workspace/Users/kaustuv.chatterjee_gmail.com#ext#@kaustuvchatterjeegmail.onmicrosoft.com to make sure we only have a single copy.
       root_path: /Workspace/Shared/.bundle/${bundle.name}/${bundle.target}
     permissions:
-      - user_name: kaustuv.chatterjee_gmail.com#ext#@kaustuvchatterjeegmail.onmicrosoft.com
+      - service_principal_name: 356834bb-7d8a-43cf-8a31-7566f9165919
         level: CAN_MANAGE
+    run_as:
+      service_principal_name: 356834bb-7d8a-43cf-8a31-7566f9165919
