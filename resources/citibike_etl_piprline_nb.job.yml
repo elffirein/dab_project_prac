@@ -14,7 +14,7 @@ resources:
           depends_on:
             - task_key: 00_wheel_task
           notebook_task:
-            notebook_path: ..\citibike_etl\notebooks\01_bronze\01_bronze_citibike.ipynb
+            notebook_path: ../citibike_etl/notebooks/01_bronze/01_bronze_citibike.ipynb
             base_parameters:
               pipeline_id: "{{job.id}}"
               run_id: "{{job.run_id}}"
@@ -27,7 +27,7 @@ resources:
           depends_on:
             - task_key: 01_bronze_citibike
           notebook_task:
-            notebook_path: ..\citibike_etl\notebooks\02_silver\02_silver_citibike.ipynb
+            notebook_path: ../citibike_etl/notebooks/02_silver/02_silver_citibike.ipynb
             base_parameters:
               pipeline_id: "{{job.id}}"
               run_id: "{{job.run_id}}"
@@ -40,7 +40,7 @@ resources:
           depends_on:
             - task_key: 02_silver_citibike
           notebook_task:
-            notebook_path: ..\citibike_etl\notebooks\03_gold\03_gold_citibike_daily_ride_summary.ipynb
+            notebook_path: ../citibike_etl/notebooks/03_gold/03_gold_citibike_daily_ride_summary.ipynb
             base_parameters:
               catalog: "${var.catalog}"
             source: WORKSPACE
@@ -49,7 +49,7 @@ resources:
           depends_on:
             - task_key: 02_silver_citibike
           notebook_task:
-            notebook_path: ..\citibike_etl\notebooks\03_gold\03_gold_citibike_daily_station_performance.ipynb
+            notebook_path: ../citibike_etl/notebooks/03_gold/03_gold_citibike_daily_station_performance.ipynb
             base_parameters:
               catalog: "${var.catalog}"
             source: WORKSPACE
